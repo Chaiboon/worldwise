@@ -35,6 +35,54 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
+    },
+    {
+      "id": "81d2",
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2025-12-26T13:57:46.011Z",
+      "notes": "test",
+      "position": {
+        "lat": "13.781818980992789",
+        "lng": "100.58288097381592"
+      }
+    },
+    {
+      "id": "da5e",
+      "cityName": "Garhwa",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-12-26T13:58:19.901Z",
+      "notes": "test5",
+      "position": {
+        "lat": "24.206889622398023",
+        "lng": "83.84765625000001"
+      }
+    },
+    {
+      "id": "964d",
+      "cityName": "Port Arthur",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2025-12-26T16:35:29.164Z",
+      "notes": "",
+      "position": {
+        "lat": "29.938275329718987",
+        "lng": "-93.98511886596681"
+      }
+    },
+    {
+      "id": "8b84",
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2025-12-27T09:30:46.278Z",
+      "notes": "",
+      "position": {
+        "lat": "13.79365574650091",
+        "lng": "100.63832759857179"
+      }
     }
   ]
 }

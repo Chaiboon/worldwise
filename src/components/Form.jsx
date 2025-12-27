@@ -23,7 +23,7 @@ export function convertToEmoji(countryCode) {
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 function Form() {
-  const {createCity,isLoading} = useCities();
+  const { createCity, isLoading } = useCities();
   const vanigate = useNavigate();
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
@@ -64,29 +64,35 @@ function Form() {
     },
     [lat, lng]
   );
+
   async function handleSubmit(e) {
     e.preventDefault();
-    if(!cityName || !date) return;
+    if (!cityName || !date) return;
 
-    const newCity ={
+    const newCity = {
       cityName,
       country,
       emoji,
       date,
       notes,
-      position:{lat,lng}
-    }
+      position: { lat, lng },
+    };
     await createCity(newCity);
-    vanigate("/App/cities")
+    vanigate("/App/cities");
   }
+
   if (isLoadingGepcoding) return <Spinner />;
 
-  if (!lat && !lng) return <Message message="Start by clicking somewhere on the map" />;
+  if (!lat && !lng)
+    return <Message message="Start by clicking somewhere on the map" />;
 
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={`${styles.form} ${isLoading ? styles.loading : ""}`} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${isLoading ? styles.loading : ""}`}
+      onSubmit={handleSubmit}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -99,7 +105,12 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <DatePicker id="date" onChange={(date) => setDate(date)} selected={date} dateFormat="dd/MM/yyyy"/>
+        <DatePicker
+          id="date"
+          onChange={(date) => setDate(date)}
+          selected={date}
+          dateFormat="dd/MM/yyyy"
+        />
       </div>
 
       <div className={styles.row}>
